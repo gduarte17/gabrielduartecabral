@@ -1,0 +1,290 @@
+@font-face {
+    font-family: "Ubuntu";
+    src: url("./fonts/Ubuntu-Regular.ttf");
+    }
+
+body {
+    margin: 0;
+    height: 100%;
+    background-color: #dddddd;
+    font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 8rem 1fr 8rem;
+    background-color: #1f1f1f;
+    position: fixed;
+    height: 100%;
+    width: 5.5rem;
+}
+
+nav>h1 {
+    margin: 0;
+    font-size: 3.5em;
+    justify-self: center;
+    align-self: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #aa96ffc2;
+}
+
+nav div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav div button {
+    background-color: #1f1f1f;
+    color: #aa96ffc2;
+    font-weight: bold;
+    height: 5.5rem;
+    width: 5.5rem;
+    margin-bottom: 1.5em;
+    border: 0px solid;
+    cursor: pointer;
+}
+
+body>section {
+    margin-left: 5.5rem;
+}
+
+/* #formacao, #exp-prof, #outros {
+    display: grid;
+}
+
+#formacao section, #exp-prof section, #outros section {
+    justify-self: center;
+} */
+
+body>section>div {
+    padding: 5rem;
+    padding-top: 2rem;
+}
+
+/* background-color: #892be27e; */
+#sobre {
+    display: grid;
+    grid-template-columns: 25rem 1fr;
+    background-color: #1f1f1f;
+    color: #aa96ffc2;
+}
+
+#sobre img {
+    border-radius: 50%;
+    height: 25rem;
+    /* margin-right: 3rem; */
+}
+
+section>div>div {
+    margin: 5rem;
+}
+
+section>div>div>h1 {
+    font-weight: 900;
+}
+
+section>div>div a {
+    text-decoration: none;
+}
+
+#sobre a button {
+    margin-top: 2rem;
+    margin-right: 2rem;
+    height: 2.5em;
+    width: 8em;
+    cursor: pointer;
+    border-radius: .25em;
+    font-size: 1em;
+}
+
+#curriculo button {
+    border: 0px;
+    color: white;
+    background-color: #aa96ffc2;
+    /* background-color: #5421dfc7; */
+}
+
+#whatsapp button {
+    border: 0px;
+    color: white;
+    background-color: #6ad16a;
+}
+
+#linkedin button {
+    border: 0px;
+    color: white;
+    background-color: #0057dabb;
+}
+
+section>div>section {
+    display: flex;
+}
+
+article {
+    border: 1px solid #999999;
+    border-radius: .25em;
+    width: 25rem;
+    padding: 1em;
+    margin-left: 2rem;
+    display: grid;
+    grid-template-rows: 2rem 3rem 1fr 15rem;
+}
+
+article h3 {
+    margin-bottom: .3em;
+    margin-top: 0;
+    font-size: 1.25em;
+    max-height: 1em;
+}
+
+article h4 {
+    margin-top: 0;
+    max-height: 3em;
+}
+
+article img {
+    height: 4rem !important;
+    border-radius: 0 !important;
+    justify-self: center;
+}
+
+article:nth-child(3)>img {
+    height: 3rem!important;
+}
+
+#exp-prof article {
+    grid-template-rows: 2rem 3rem 5rem 10rem 3rem 1fr;
+}
+
+#last-letter {
+    font-weight: normal;
+
+}
+
+article button {
+    height: 2em;
+    border: 0px solid;
+    border-radius: .5em;
+    background-color: #aa96ffc2;;
+    color: white;
+    font-weight: bold;
+}
+
+article button a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+@media (max-width: 762px) {
+    body {
+        display: grid;
+        grid-template-rows: 5.5rem 1fr;
+        grid-template-columns: 100%;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: #1f1f1f;
+        position: fixed;
+        height: 5.5rem;
+        width: 100%;
+        position: relative;
+    }
+
+    nav div {
+        flex-direction: row;
+    }
+
+    body>section {
+        width: 100%;
+        margin: 0;
+        grid-row-start: 2;
+    }
+
+    #sobre {
+        display: grid;
+        grid-template-columns: 100%;
+        justify-self: center;
+        padding: 1.5rem;
+    }
+
+    #sobre * {
+        justify-self: center;
+    }
+
+    #sobre div {
+        margin: 0;
+        display: grid;
+    }
+
+    #sobre h1 {
+        margin-bottom: 0;
+    }
+
+    #sobre img {
+        height: 10rem;
+    }
+
+    #sobre a button {
+        margin-right: 0;
+    }
+
+    #formacao, #exp-prof, #outros {
+        padding: 1rem;
+        padding-top: 0;
+    }
+
+    #formacao section, #exp-prof section, #outros section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    article {
+        margin: 0;
+        margin-bottom: 2rem;
+        width: 90%;
+        height: fit-content;
+        display: grid;
+        grid-template-rows: 3.5rem 4.5rem 1fr 7rem;
+    }
+
+    article h3, article h4 {
+        max-height: none;
+    }
+
+    article img {
+        max-height: 2.5rem;
+    }
+
+    article:nth-child(2) {
+        grid-template-rows: 2rem 4.5rem 1fr 15rem;
+    }
+
+    article:nth-child(2) ul {
+        padding-left: 1.5rem;
+    }
+
+    article:nth-child(3)>img {
+        height: 1.5rem!important;
+    }
+
+    #exp-prof article:nth-child(1) {
+        grid-template-rows: 2rem 3rem 0.2fr 15rem 3rem 1fr;
+    }
+
+    #outros article {
+        grid-template-rows: 3rem 4rem 1fr 15rem;
+    }
+    
+    #outros article button {
+        margin-bottom: 2em;
+    }
+}
