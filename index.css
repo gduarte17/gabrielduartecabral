@@ -202,7 +202,6 @@ article button a {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        background-color: #1f1f1f;
         position: fixed;
         height: 5.5rem;
         width: 100%;
