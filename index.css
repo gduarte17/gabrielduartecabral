@@ -6,7 +6,8 @@
 body {
     margin: 0;
     height: 100%;
-    background-color: #dddddd;
+    /* background-color: #1f1f1f; */
+    background-color: #0a0b20;
     font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
 }
 
@@ -14,10 +15,9 @@ nav {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 8rem 1fr 8rem;
-    background-color: #1f1f1f;
     position: fixed;
     height: 100%;
-    width: 5.5rem;
+    width: 7rem;
 }
 
 nav>h1 {
@@ -29,37 +29,26 @@ nav>h1 {
 
 nav a {
     text-decoration: none;
-    color: #aa96ffc2;
+    /* color: #aa96ffc2; */
+    color: #beafffc2;
+    font-weight: bold;
+    height: 5rem;
+    margin-bottom: 1.5em;
+    border: 0px solid;
+    cursor: pointer;
+    padding: .45rem;
 }
 
 nav div {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-nav div button {
-    background-color: #1f1f1f;
-    color: #aa96ffc2;
-    font-weight: bold;
-    height: 5.5rem;
-    width: 5.5rem;
-    margin-bottom: 1.5em;
-    border: 0px solid;
-    cursor: pointer;
+    align-items: center;
 }
 
 body>section {
-    margin-left: 5.5rem;
+    margin-left: 7rem;
 }
-
-/* #formacao, #exp-prof, #outros {
-    display: grid;
-}
-
-#formacao section, #exp-prof section, #outros section {
-    justify-self: center;
-} */
 
 body>section>div {
     padding: 5rem;
@@ -70,8 +59,8 @@ body>section>div {
 #sobre {
     display: grid;
     grid-template-columns: 25rem 1fr;
-    background-color: #1f1f1f;
-    color: #aa96ffc2;
+    /* color: #aa96ffc2; */
+    color: #beafffc2;
 }
 
 #sobre img {
@@ -79,6 +68,24 @@ body>section>div {
     height: 25rem;
     /* margin-right: 3rem; */
 }
+
+#sobre>div>div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#formacao, #exp-prof, #outros {
+    background-color: #ccc;
+}
+
+#formacao {
+    border-radius: 1em 1em 0 0;
+}
+
+#outros {
+    border-radius: 0 0 1em 1em;
+}
+
 
 section>div>div {
     margin: 5rem;
@@ -105,8 +112,8 @@ section>div>div a {
 #curriculo button {
     border: 0px;
     color: white;
-    background-color: #aa96ffc2;
-    /* background-color: #5421dfc7; */
+    /* background-color: #aa96ffc2; */
+    background-color: #beafffc2;
 }
 
 #whatsapp button {
@@ -126,13 +133,15 @@ section>div>section {
 }
 
 article {
-    border: 1px solid #999999;
-    border-radius: .25em;
+    border: 2px solid #6d6d6d;
+    box-shadow: 0 0 8px #892be28a;
+    background-color: #e7e7e7;
+    border-radius: .5em;
     width: 25rem;
     padding: 1em;
     margin-left: 2rem;
     display: grid;
-    grid-template-rows: 2rem 3rem 1fr 15rem;
+    grid-template-rows: 2rem 3rem 1fr 16rem;
 }
 
 article h3 {
@@ -170,7 +179,8 @@ article button {
     height: 2em;
     border: 0px solid;
     border-radius: .5em;
-    background-color: #aa96ffc2;;
+    /* background-color: #aa96ffc2; */
+    background-color: #beafffc2;
     color: white;
     font-weight: bold;
 }
@@ -181,7 +191,7 @@ article button a {
     color: white;
 }
 
-@media (max-width: 762px) {
+@media (max-width: 850px) {
     body {
         display: grid;
         grid-template-rows: 5.5rem 1fr;
@@ -191,7 +201,7 @@ article button a {
     nav {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
         background-color: #1f1f1f;
         position: fixed;
         height: 5.5rem;
@@ -199,8 +209,18 @@ article button a {
         position: relative;
     }
 
+    nav h1 {
+        margin-left: 1rem !important;
+    }
+
     nav div {
         flex-direction: row;
+        margin-right: 1rem !important;
+    }
+
+    nav div a {
+        height: 1.5rem;
+        margin-bottom: 0;
     }
 
     body>section {
@@ -225,6 +245,10 @@ article button a {
         display: grid;
     }
 
+    #sobre>div>div {
+        display: grid;
+    }
+
     #sobre h1 {
         margin-bottom: 0;
     }
@@ -234,7 +258,7 @@ article button a {
     }
 
     #sobre a button {
-        margin-right: 0;
+        margin: 1rem;
     }
 
     #formacao, #exp-prof, #outros {
@@ -245,6 +269,14 @@ article button a {
     #formacao section, #exp-prof section, #outros section {
         display: flex;
         flex-direction: column;
+    }
+
+    #formacao h1, #exp-prof h1, #outros h1 {
+        margin-top: 0;
+    }
+
+    #formacao h1 {
+        padding-top: 2rem;
     }
 
     article {
@@ -265,7 +297,7 @@ article button a {
     }
 
     article:nth-child(2) {
-        grid-template-rows: 2rem 4.5rem 1fr 15rem;
+        grid-template-rows: 2rem 4.5rem 1fr 20rem;
     }
 
     article:nth-child(2) ul {
